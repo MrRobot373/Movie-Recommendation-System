@@ -71,6 +71,6 @@ This project is a **Content-Based Movie Recommendation System** that recommends 
 
 
 ### Future Improvements:
-- Integrating IMDb API for fetching real-time data, including user reviews and ratings.
-- Enhance the recommendation system by using machine learning models.
-- Add more interactive elements like movie trailers, director details, etc.
+
+- Add more movies and interactive elements like movie trailers, director details, etc.
+- Add collabrative and hybrid model for recommendation of movies
