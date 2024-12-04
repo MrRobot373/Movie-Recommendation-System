@@ -10,7 +10,7 @@ import pickle
 import requests
 
 # Load the nlp model and tfidf vectorizer from disk
-filename = 'Netflix-recommender-system-deployment/nlp_model.pkl'
+filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('Netflix-recommender-system-deployment/tranform.pkl', 'rb'))
 
