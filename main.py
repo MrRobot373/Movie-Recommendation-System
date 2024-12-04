@@ -10,12 +10,12 @@ import pickle
 import requests
 
 # Load the nlp model and tfidf vectorizer from disk
-filename = r'Netflix-recommender-system-deployment\nlp_model.pkl'
+filename = 'Netflix-recommender-system-deployment/nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open(r'Netflix-recommender-system-deployment\tranform.pkl', 'rb'))
+vectorizer = pickle.load(open('Netflix-recommender-system-deployment/tranform.pkl', 'rb'))
 
 def create_similarity():
-    data = pd.read_csv(r'Netflix-recommender-system-deployment\main_data.csv')
+    data = pd.read_csv('Netflix-recommender-system-deployment/main_data.csv')
     # creating a count matrix
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['comb'])
@@ -50,7 +50,7 @@ def convert_to_list(my_list):
     return my_list
 
 def get_suggestions():
-    data = pd.read_csv(r'Netflix-recommender-system-deployment\main_data.csv')
+    data = pd.read_csv('Netflix-recommender-system-deployment/main_data.csv')
     return list(data['movie_title'].str.capitalize())
 
 app = Flask(__name__)
