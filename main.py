@@ -63,13 +63,26 @@ def home():
 
 @app.route("/similarity", methods=["POST"])
 def similarity():
-    movie = request.form['name']
-    rc = rcmd(movie)
-    if type(rc) == type('string'):
-        return rc
-    else:
-        m_str = "---".join(rc)
-        return m_str
+    try:
+        # Log the incoming movie name
+        movie = request.form['name']
+        print(f"Received movie: {movie}")  # Log incoming request data
+
+        # Call the recommendation function
+        rc = rcmd(movie)
+        print(f"Recommendation result: {rc}")  # Log recommendation results
+
+        # If the recommendations are a string (error message), return that
+        if isinstance(rc, str):
+            return rc
+        else:
+            m_str = "---".join(rc)
+            return m_str
+
+    except Exception as e:
+        print(f"Error processing similarity: {e}")
+        return "An error occurred while processing your request."
+
 
 @app.route("/recommend", methods=["POST"])
 def recommend():
