@@ -8,6 +8,7 @@ import bs4 as bs
 import urllib.request  # Importing urllib.request for web scraping
 import pickle
 import requests
+import os
 
 # Load the nlp model and tfidf vectorizer from disk
 filename = 'nlp_model.pkl'
@@ -137,15 +138,10 @@ def recommend():
         for i in range(len(cast_places))
     }
 
-    # Remove the reviews part
-    # We don't need this section anymore because reviews are removed
-    # Just pass the data without reviews
-
     # Passing all the data to the HTML file
     return render_template('recommend.html', title=title, poster=poster, overview=overview, vote_average=vote_average,
         vote_count=vote_count, release_date=release_date, runtime=runtime, status=status, genres=genres,
         movie_cards=movie_cards, casts=casts, cast_details=cast_details)
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 10000)), debug=True)
