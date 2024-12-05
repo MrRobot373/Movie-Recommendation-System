@@ -68,6 +68,7 @@ This project is a **Content-Based Movie Recommendation System** that recommends 
    python main.py
    ```
    Visit `http://127.0.0.1:5000/` in your browser to interact with the application.
+(API_KEY=7fee067b60fd14ed0bd0013b0863045f)
 
 
 ### Future Improvements:
