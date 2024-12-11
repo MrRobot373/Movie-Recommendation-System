@@ -2,6 +2,8 @@
 
 ## 🎬 Content-Based Movie Recommendation System 🎥
 
+- > https://www.linkedin.com/feed/update/urn:li:activity:7270365070788841475/
+
 This project is a **Content-Based Movie Recommendation System** that recommends movies based on a given movie's details (e.g., genre, cast, and other related information). The system uses **Cosine Similarity** to suggest similar movies based on the movie attributes. It also provides detailed information about the movie and its cast, including profiles, biographies, and ratings. The user interface mimics Netflix's design to provide a seamless and engaging experience for users.
 
 ---
